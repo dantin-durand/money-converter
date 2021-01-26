@@ -9,6 +9,7 @@
 *.sublime-project
 *.sublime-workspace
 .DS_Store
+package-lock.json
 Thumbs.db
 UserInterfaceState.xcuserstate
 $RECYCLE.BIN/
