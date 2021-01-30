@@ -16,7 +16,6 @@
 import { IonApp, IonPage, IonContent } from "@ionic/vue";
 import Result from "./views/Result.vue";
 import Search from "./views/Search.vue";
-import "./theme/style.css";
 
 export default {
   name: "App",

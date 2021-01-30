@@ -1,11 +1,12 @@
 <template>
-  <form @submit.prevent="">
+  <form @submit.prevent="submitConversion">
     <ion-item class="input-amout">
       <ion-input
         class="ion-text-center"
         v-model="dataInputAmout"
         type="number"
         placeholder="Montant"
+        step="0.01"
       ></ion-input>
       <ion-label class="label-amout">{{ dataSelectEntry }}</ion-label>
     </ion-item>
@@ -49,7 +50,7 @@
       </ion-row>
     </ion-grid>
     <ion-button
-      @click="submitConversion"
+      type="submit"
       class="submit-btn"
       color="dark"
       shape="round"
@@ -135,6 +136,11 @@ export default {
         this.dataInputAmout.length <= 0 ||
         this.dataInputAmout <= 0
       ) {
+        const sendResult = {
+          result: "",
+          devise: "",
+        };
+        this.$bus.emit("send-search", sendResult);
         this.openToast("Vous devez saisir un montant supérieur à 0.");
         return;
       }
@@ -143,10 +149,20 @@ export default {
         this.dataInputAmout.substr(this.dataInputAmout.indexOf(".") + 1)
           .length > 2
       ) {
+        const sendResult = {
+          result: "",
+          devise: "",
+        };
+        this.$bus.emit("send-search", sendResult);
         this.openToast("Vous devez saisir un montant avec maximum 2 décimale.");
         return;
       }
       if (this.dataSelectEntry === this.dataSelectExit) {
+        const sendResult = {
+          result: "",
+          devise: "",
+        };
+        this.$bus.emit("send-search", sendResult);
         this.openToast(
           "Vous devez choisir une devise différente de la première."
         );
