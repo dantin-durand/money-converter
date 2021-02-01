@@ -10,7 +10,7 @@ Convertisseur de monnaie en utilisant l'API [fixer.io](http://fixer.io/) et VUE 
 
 ## Démo
 
-Lien de la démo: http://webstart.dantindurand.fr/vue-stonks
+Lien de la démo: http://stonks.webstart.dantindurand.fr/
 
 
 
