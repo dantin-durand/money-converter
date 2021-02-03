@@ -1,6 +1,6 @@
 # MONEY CONVERTER (vue stonks)
 
-Convertisseur de monnaie en utilisant l'API [fixer.io](http://fixer.io/) et VUE CLI.
+Convertisseur de monnaie utilisant l'API [fixer.io](http://fixer.io/) et VUE CLI.
 
 ## Configuration
 
